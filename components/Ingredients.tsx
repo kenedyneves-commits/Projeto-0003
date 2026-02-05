@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { INGREDIENTS } from '../constants';
+import { INGREDIENTS } from '../constants.ts';
 
 const Ingredients: React.FC = () => {
   return (

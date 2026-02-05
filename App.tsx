@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import BundleSelector from './components/BundleSelector';
-import Ingredients from './components/Ingredients';
-import FAQ from './components/FAQ';
-import StickyCTA from './components/StickyCTA';
-import { BENEFITS, BUNDLES } from './constants';
+import Navbar from './components/Navbar.tsx';
+import BundleSelector from './components/BundleSelector.tsx';
+import Ingredients from './components/Ingredients.tsx';
+import FAQ from './components/FAQ.tsx';
+import StickyCTA from './components/StickyCTA.tsx';
+import { BENEFITS, BUNDLES } from './constants.ts';
 
 const App: React.FC = () => {
   const [selectedBundleId, setSelectedBundleId] = useState(BUNDLES[1].id);
@@ -84,7 +84,6 @@ const App: React.FC = () => {
                 }}
               />
             </div>
-            {/* Background decorations */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-gradient-to-tr from-[#fdf2f8] to-transparent rounded-full -z-0 blur-3xl opacity-60"></div>
           </div>
         </div>
@@ -220,7 +219,6 @@ const App: React.FC = () => {
                 Empowering your journey to inner health and outer radiance. Our supplements are crafted with purity, science, and your confidence in mind.
               </p>
               <div className="flex gap-4">
-                {/* Social icons placeholders */}
                 <div className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:text-[#db2777] cursor-pointer transition-colors">f</div>
                 <div className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:text-[#db2777] cursor-pointer transition-colors">ig</div>
               </div>

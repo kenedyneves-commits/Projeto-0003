@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BUNDLES } from '../constants';
+import { BUNDLES } from '../constants.ts';
 
 interface BundleSelectorProps {
   selectedId: string;

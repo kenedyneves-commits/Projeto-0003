@@ -12,21 +12,35 @@
     <style>
       body {
         font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
       }
       h1, h2, h3 {
         font-family: 'Playfair Display', serif;
       }
     </style>
-  <script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
-</head>
+    <script>
+      // Simple error logger to help debug blank pages
+      window.onerror = function(msg, url, line, col, error) {
+        console.error("Global Error: " + msg + " at " + url + ":" + line);
+        return false;
+      };
+      window.addEventListener('unhandledrejection', function(event) {
+        console.error("Unhandled Rejection: " + event.reason);
+      });
+    </script>
+  </head>
   <body class="bg-white text-slate-800">
     <div id="root"></div>
   </body>
